@@ -102,5 +102,24 @@
             echo count($friendsArray); //returns number of elements in the array
         ?>
 
+        <form action="site.php" method="post">
+            Apples: <input type="checkbox" name="fruits[]" value="apples"><br> <!-- fruits[] stores value inside of array -->
+            Oranges: <input type="checkbox" name="fruits[]" value="oranges"><br>
+            Pearss: <input type="checkbox" name="fruits[]" value="pears"><br>
+            <input type="submit">
+        </form>
+
+        <?php
+            $fruits = $_POST["fruits"];
+            echo $fruits[0];
+        ?>
+
+        <!-- Associative Arrays -->
+        <?php
+            $grades = array("Jim" => "A", "Boff" => "B", "Buzzcocks", "C"); //associative arrays store key value pairs - ensure all keys are uniquel
+            echo $grades["Jim"]; //prints the value for the key "Jim" in the associative array
+            echo $grades[$_POST["name"]]; //returns grade for the name enetered into the text box if it exists
+        ?>
+
     </body>
 </html>
