@@ -22,7 +22,8 @@
             $characterName = "Trekka"; //update values stored in variables
             $characterName2 = "Buzzcocks";
 
-            echo "$characterName liked to hang around with $characterName2"; 
+            echo "$characterName liked to hang around with $characterName2";
+            echo "<br><br>";
         ?>
 
         <!-- Data Types in PHP -->
@@ -49,8 +50,20 @@
             echo "$phrase<br>";
             $phrase2 = "Hello World";
             echo str_replace("bello", "areet", strtolower($phrase)); //replaces substring text with next text
-            echo substr($phrase, 0, 4) //gets substring from index 0 to 4
+            echo substr($phrase, 0, 4); //gets substring from index 0 to 4
+            echo "<br><br>";
         ?>
+
+        <!-- Working with numbers in PHP -->
+        <?php
+            echo 5 + 9;
+            echo 10 % 3; //mod opeerator - gives remainder of the division
+            $num = 10;
+            $num++; //increments the number
+            $num-- //decrements the number
+        ?>
+
+        <!-- Getting user inputs -->
 
     </body>
 </html>
