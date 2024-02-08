@@ -136,5 +136,30 @@
             echo cube(3);
         ?>
 
+        <!-- If Statements -->
+        <?php
+            $isMale = true;
+            $isTall = false;
+            if ($isMale && $isTall){ //can also use the or operator ||
+                echo "You are a tall male";
+            } elseif ($isMale && !$isTall) { //notice its elseif not elif
+                echo "You are a small man";
+            } else {
+                echo "You are female";
+            };
+
+            function getMax($num, $num2){ //using if statements in functions
+                if($num > $num2){ //can also use double equals to check if they are equal ==
+                    echo "Num 1 is bigger";
+                    return $num1;
+                } else {
+                    echo "Num 2 is bigger";
+                    return $num2;
+                }
+            }
+
+            echo getMax(300,900);
+        ?>
+
     </body>
 </html>
