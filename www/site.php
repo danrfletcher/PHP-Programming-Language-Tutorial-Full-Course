@@ -26,6 +26,31 @@
         ?>
 
         <!-- Data Types in PHP -->
+        <?php
+            $someStr = "string"; //this is a string
+            $someInt = 25; //this is a positive integer
+            $negInt = -5; //this is a negative integer
+            $someFloat = 3.7; //this is a floating point integer
+            $someBool = true; //this is a boolean
+            $falseBool = false; //this is a boolean
+            null; //this represents no value/absence of valuej
+        ?>
+
+        <!-- Working with strings in PHP -->
+        <?php
+            //See the PHP manual for more information, it's similar to MDN for JavaScript https://www.php.net/manual/en/index.php
+            $phrase = "hElLO tHeRE";
+            echo strtolower($phrase); //this is a string function
+            echo strtoupper($phrase);
+            echo strlen("Dog");
+            echo $phrase[0]; //0 indexed
+            echo $phrase[1];
+            $phrase[0] = "B";
+            echo "$phrase<br>";
+            $phrase2 = "Hello World";
+            echo str_replace("bello", "areet", strtolower($phrase)); //replaces substring text with next text
+            echo substr($phrase, 0, 4) //gets substring from index 0 to 4
+        ?>
 
     </body>
 </html>
