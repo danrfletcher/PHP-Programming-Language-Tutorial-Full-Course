@@ -95,5 +95,12 @@
             Your age is: <?php echo $_POST["age"] ?> 
         </p>
 
+        <!-- Arrays -->
+        <?php
+            $friendsArray = array("Buzzcocks", "Trekka", "Humpty Dumpty");
+            echo $friendsArray[0]; //prints 1st element in the array
+            echo count($friendsArray); //returns number of elements in the array
+        ?>
+
     </body>
 </html>
