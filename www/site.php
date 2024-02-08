@@ -60,10 +60,20 @@
             echo 10 % 3; //mod opeerator - gives remainder of the division
             $num = 10;
             $num++; //increments the number
-            $num-- //decrements the number
+            $num--; //decrements the number
         ?>
 
         <!-- Getting user inputs -->
+        <form action="site.php" method="get"> <!--action takes the name of the html page that will handle the form-->
+            Name: <input type="text" name="name"> 
+            Age: <input type="text" name="age"> 
+            <input type="submit">
+        </form>
+        <br>
+        <p>
+            Your name is: <?php echo $_GET["name"] ?> <!-- Prints name entered into the input field of name "name" to the document -->
+            Your age is: <?php echo $_GET["age"] ?>
+        </p>
 
     </body>
 </html>
