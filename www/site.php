@@ -234,7 +234,7 @@
             echo $book1->author;
         ?>
 
-        <!-- Constructors -->
+        <!-- Objects & Classes -->
         <?php
             class Car {
                 public $bhp; //properties available to objects using this class
@@ -276,6 +276,18 @@
             echo $bugatti->$acceleration; //error - prop is private
             echo $bugatti->getAcceleration(); //using getter to access private prop
             $bugatti->setAcceleration(2.0); //using setter to set private prop
+
+            class Supercar extends Car { //will inherit all of the properties from the base class (car)
+                public $luxuryFeatures;
+
+                function isFast(){ //overrides the function from the base class
+                    if($this->bhp >= 200){
+                        return "it's superrrrrr fast!";
+                    } else {
+                        return "its not even a supercar pal";
+                    }
+                }
+            }
         ?>
 
     </body>
