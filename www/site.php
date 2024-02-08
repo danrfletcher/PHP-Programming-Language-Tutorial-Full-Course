@@ -184,5 +184,39 @@
             }
         ?>
 
+        <!-- While Loops -->
+        <?php
+            $index = 1;
+            while($index <= 5){ //while loop
+                echo $index;
+                $index++;
+            };
+            echo "<br>";
+
+            do{ //difference between while & do while is that do while checks condition after the operation has been carried out, so will always complete at least once, rather than at least 0 times
+                echo $index;
+                $index--;
+            }while($index >= 0);
+        ?>
+
+        <!-- For Loops -->
+        <?php
+            for($i = 1; $i < 10; $i++){ //looping condition & initialization also defined in the loop initialization
+                echo $i;
+            };
+
+            echo "<br>";
+
+            $boffins = array("Geek", "Dork", "BigBoff");
+            for($i = 0; $i < count($boffins); $i++){
+                echo $boffins[$i];
+            };
+        ?>
+
+        <!-- Working with HTML -->
+        <?php include "divider.html" //use this to directly include a html file?>
+        <?php $title = "WOOOO LOOK AT THIS MY NEW PHP PROJECT"; ?>
+        <?php include "title.php" //but you can also include another php files?> 
+
     </body>
 </html>
