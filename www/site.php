@@ -161,5 +161,28 @@
             echo getMax(300,900);
         ?>
 
+        <!-- Switch Statements -->
+        <form action="site.php" method="post">
+            Grade: <input type="text" name="grade"><br>
+            <input type="submit">
+        </form>
+
+        <?php
+            $grade = $_POST["grade"];
+            switch($grade){
+                case "A":
+                    echo "You did fkin class pal";
+                    break;
+                case "B":
+                    echo "You did areet mate";
+                    break;
+                case "C":
+                    echo "You did canny shite like";
+                    break;
+                default:
+                    echo "You wot m8";
+            }
+        ?>
+
     </body>
 </html>
