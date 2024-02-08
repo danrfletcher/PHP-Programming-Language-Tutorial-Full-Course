@@ -75,5 +75,25 @@
             Your age is: <?php echo $_GET["age"] ?> 
         </p>
         <!-- Information entered into the form is submitted to the URL -->
+
+        <!-- URL Parameters -->
+        <!--
+            - Allows you to give information to the PHP page without requiring the user to enter the information 
+            - e.g. http://localhost:4000/www/site.php?name=buzzcocks&age=23 - the above form with name "buzzcocks" & age 23, page will load with these values rendered onto the document
+        -->
+        
+        <!-- POST vs GET --> 
+        <!-- Here is a copy of the above form, using POST. This will not store values in the URL -->
+        <form action="site.php" method="post">
+            Name: <input type="text" name="name"> 
+            Age: <input type="number" name="age"> 
+            <input type="submit">
+        </form>
+        <br>
+        <p>
+            Your name is: <?php echo $_POST["name"] ?>
+            Your age is: <?php echo $_POST["age"] ?> 
+        </p>
+
     </body>
 </html>
