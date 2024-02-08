@@ -218,5 +218,65 @@
         <?php $title = "WOOOO LOOK AT THIS MY NEW PHP PROJECT"; ?>
         <?php include "title.php" //but you can also include another php files?> 
 
+        <!-- Classes & Objects -->
+        <?php
+            class Book {
+                var $title;
+                var $author;
+                var $pages;
+            }
+
+            $book1 = new Book;
+            $book1->title = "The 48 Laws of Power";
+            $book1->author = "Robert Greene";
+            $book1->pages = 69420;
+
+            echo $book1->author;
+        ?>
+
+        <!-- Constructors -->
+        <?php
+            class Car {
+                public $bhp; //properties available to objects using this class
+                var $topSpeed; //var is interchangeable with public - both make props visible to all other php code
+                private $acceleration; //only code inside of the class can access this
+
+                //class functions
+                function isFast(){ //defining a function on the class, available to instances of the class
+                    if($this->bhp >= 200){
+                        return "it's fast!";
+                    } else {
+                        return "its slow :(";
+                    }
+                }
+                
+                //getters & setters
+                function getAcceleration(){
+                    return $this->$acceleration;
+                }
+                
+                function setAcceleration($acceleration){
+                    if($acceleration > 0){ //enforce rule to ensure valid value when setting property
+                        $this->rating = $rating;
+                    }
+                }
+
+                //constructor
+                function __construct($name, $aBhp, $aTopSpeed, $aAcceleration){ //gets executed whenever a new car object is initialized that is an instance of this class
+                    $this->bhp = $aBhp;
+                    $this->topSpeed = $aTopSpeed;
+                    $this->setAcceleration($aAcceleration);
+                    echo "New car created by $name";
+                }
+            }
+
+            $bugatti = new Car("Dan", 376, 170, 3.6);
+            echo $bugatti->bhp; //accessing the bhp property on the bugatti object, which is an instance of the car class
+            echo $bugatti->isFast(); //calling the isFast function on the bugatti object
+            echo $bugatti->$acceleration; //error - prop is private
+            echo $bugatti->getAcceleration(); //using getter to access private prop
+            $bugatti->setAcceleration(2.0); //using setter to set private prop
+        ?>
+
     </body>
 </html>
