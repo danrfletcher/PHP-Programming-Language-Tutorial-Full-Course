@@ -121,5 +121,20 @@
             echo $grades[$_POST["name"]]; //returns grade for the name enetered into the text box if it exists
         ?>
 
+        <!-- Functions -->
+        <?php
+            function sayHi($name){ //any code in parenthesis is an argument
+                echo "Hello $name";
+            }; //any code inside of curly brackets is part of the function
+
+            sayHi("Dan"); //calling the function
+
+            function cube($num){
+                return $num ** 3;
+            };
+
+            echo cube(3);
+        ?>
+
     </body>
 </html>
